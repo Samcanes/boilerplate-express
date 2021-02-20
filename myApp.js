@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 
 
+console.log("Hello World")
 
 
 
@@ -29,11 +30,4 @@ var app = express();
 
 
 
-
-
-
-
-
-
-
- module.exports = app;
+module.exports = app;
