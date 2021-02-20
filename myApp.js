@@ -3,7 +3,7 @@ const { setupBackgroundApp } = require('fcc-express-bground');
 var app = express();
 
 console.log("Hello World")
-setupBackgroundApp.log("Hello World")
+bGround.log("Hello World")
 
 
 
