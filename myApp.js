@@ -3,6 +3,7 @@ var app = express();
 
 
 bGround.log("Hello World")
+console.log("Hello World")
 
 
 
