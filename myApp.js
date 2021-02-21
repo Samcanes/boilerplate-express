@@ -2,6 +2,17 @@ var express = require('express');
 const { setupBackgroundApp } = require('fcc-express-bground');
 var app = express();
 
+
+// 7
+
+app.use(function middleware(req, res, next) {
+    var string = req.method + " " + req.path + " - " + req.ip;
+    console.log(string);
+    // Call the next function in line:
+    next();
+});
+
+
 console.log("Hello World");
 require('dotenv').config()
 
@@ -36,6 +47,8 @@ app.get("/json", function(req, res) {
     }
 
 });
+
+
 
 
 
