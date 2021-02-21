@@ -68,16 +68,15 @@ app.get('/:words/echo', (req, res) => {
     res.json({ 'echo': req.params.words })
 })
 
+//10
 
 
 
-
-
-
-
-
-
-
+app.get('/profile', (req, res) => {
+    let string = req.query.first + " " + req.query.last;
+    console.log(string);
+    res.json({ 'Name': string })
+})
 
 
 
