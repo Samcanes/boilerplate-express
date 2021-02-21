@@ -2,6 +2,10 @@ var express = require('express');
 const { setupBackgroundApp } = require('fcc-express-bground');
 var app = express();
 
+console.log("Hello World");
+require('dotenv').config()
+let bodyParser = require('body-parser')
+
 
 // 7
 
@@ -12,9 +16,12 @@ app.use(function middleware(req, res, next) {
     next();
 });
 
+//11
 
-console.log("Hello World");
-require('dotenv').config()
+app.use(bodyParser.urlencoded({
+    extended: false
+}))
+
 
 
 
@@ -80,12 +87,6 @@ app.get("/name", function(req, res) {
         name: `${firstName} ${lastName}`
     });
 });
-
-
-
-
-
-
 
 
 
