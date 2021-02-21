@@ -25,9 +25,12 @@ app.use('/public', express.static(__dirname + "/public"));
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/views/index.html");
 });
+app.get("/json", function(req, res) {
+    res.json({ "message": "Hello json" })
+});
 
 
-// app.use("/assets", express.static(__dirname + "/public"));
+
 var port = process.env.PORT || 3000;
 bGround.setupBackgroundApp(app, myApp, __dirname).listen(port, function() {
     bGround.log('Node is listening on port ' + port + '...')
