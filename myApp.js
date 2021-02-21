@@ -61,6 +61,13 @@ app.get('/now', function(req, res, next) {
     res.json({ 'time': req.time });
 });
 
+//9
+
+app.get('/:words/echo', (req, res) => {
+    console.log(req.params);
+    res.json({ 'echo': req.params.words })
+})
+
 
 
 
