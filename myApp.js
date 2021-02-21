@@ -49,12 +49,17 @@ app.get("/json", function(req, res) {
 });
 
 
+// 8
 
-
-
-
-
-
+app.get('/now', function(req, res, next) {
+    console.log("///////")
+    console.log(new Date())
+    req.time = new Date().toString();
+    next();
+}, function(req, res) {
+    console.log(".......")
+    res.json({ 'time': req.time });
+});
 
 
 
